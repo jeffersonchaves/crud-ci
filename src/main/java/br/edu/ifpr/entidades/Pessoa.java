@@ -25,4 +25,14 @@ public class Pessoa {
 		
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public Integer getIdade() {
+		return idade;
+	}
+	
+	
+
 }
