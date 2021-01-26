@@ -1,5 +1,7 @@
 package br.edu.ifpr.entidades;
 
+import br.edu.ifpr.exceptions.NomeInvalidoException;
+
 public class Pessoa {
 	
 	private String nome;
@@ -7,7 +9,12 @@ public class Pessoa {
 	public String getNome() {
 		return nome;
 	}
-	public void setNome(String nome) {
+	public void setNome(String nome) throws NomeInvalidoException {
+		
+		if(nome == null || nome.equals("") ) {
+			throw new NomeInvalidoException("nome inválido");
+		}
+		
 		this.nome = nome;
 	}
 	public String getIdade() {
